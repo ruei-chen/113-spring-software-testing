@@ -41,13 +41,13 @@ test("Test Student's setName", () => {
     const student = new Student();
 
     student.setName("Alice");
-    assert.strictEqual(student.getName(), "Alice", "Should set name correctly");
+    assert.strictEqual(student.getName(), "Alice", "Should set name to 'Alice'");
 
-    student.setName("");
-    assert.strictEqual(student.getName(), "", "Should allow empty string");
+    student.setName(123); // Invalid type
+    assert.strictEqual(student.getName(), "Alice", "Invalid input should not change the name");
 
-    student.setName(123);
-    assert.strictEqual(student.getName(), "Alice", "Should ignore invalid names");
+    student.setName(""); // Empty string is valid
+    assert.strictEqual(student.getName(), "", "Should allow setting an empty name");
 });
 
 test("Test Student's getName", () => {
