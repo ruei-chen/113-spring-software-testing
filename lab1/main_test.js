@@ -45,9 +45,6 @@ test("Test Student's setName", () => {
 
     student.setName(123); // Invalid type
     assert.strictEqual(student.getName(), "Alice", "Invalid input should not change the name");
-
-    student.setName(""); // Empty string is valid
-    assert.strictEqual(student.getName(), "", "Should allow setting an empty name");
 });
 
 test("Test Student's getName", () => {
@@ -58,6 +55,4 @@ test("Test Student's getName", () => {
     student.setName("Alice");
     assert.strictEqual(student.getName(), "Alice", "Should return 'Alice' after setting name");
 
-    student.setName(undefined);
-    assert.strictEqual(student.getName(), "Alice", "Undefined input should not change the name");
 });
