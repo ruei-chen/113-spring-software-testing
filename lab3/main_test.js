@@ -25,7 +25,7 @@ describe('exp()', () => {
     it('should throw an error for overflow', () => {
         const calculator = new Calculator();
         assert.throws(() => {
-            calculator.exp(710);  // Exponential of 710 exceeds the limit of finite numbers in JavaScript
+            calculator.exp(710);
         }, /overflow/);
     });
 });
