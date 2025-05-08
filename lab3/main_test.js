@@ -2,6 +2,9 @@ const { describe, it } = require('node:test');
 const assert = require('assert');
 const { Calculator } = require('./main');
 
+<<<<<<< HEAD
+// TODO: write your tests here
+=======
 // TODO: write your tests here
 // 測試 exp 方法
 describe('exp()', () => {
@@ -60,3 +63,4 @@ describe('log()', () => {
         }, /math domain error \(2\)/);
     });
 });
+>>>>>>> a08f8b9d326473acd32179b170723d984c80145c
