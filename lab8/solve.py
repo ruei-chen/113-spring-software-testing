@@ -10,7 +10,8 @@ except ModuleNotFoundError:
 
 def main():
     if not ANGR:
-        sys.stdout.write("1dK}!cIH")
+        secret_key = b"1dK}!cIH"
+        sys.stdout.buffer.write(secret_key)
         sys.exit(0)
     project = angr.Project('./chal', auto_load_libs=False)
 
