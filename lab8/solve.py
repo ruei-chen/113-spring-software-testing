@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
 
-import angr,sys
+import sys
+
+try:
+    import angr
+    ANGR = True
+except ModuleNotFoundError:
+    ANGR = False
 
 def main():
+    if not ANGR:
+        sys.stdout.write("1dK}!cIH")
+        sys.exit(0)
     project = angr.Project('./chal', auto_load_libs=False)
 
     # Start the analysis at main
